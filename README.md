@@ -123,7 +123,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
 
 ## Важные замечания
 
-- Модуль использует компонент `myvisits:logviewer`, а не `local.myvisits:...`
+
 - Идентификатор модуля для `Loader::includeModule()` — `local.myvisits`
 - Если после переустановки новые записи не появляются, модуль нужно переустановить, чтобы заново зарегистрировался обработчик `OnEpilog`
 
