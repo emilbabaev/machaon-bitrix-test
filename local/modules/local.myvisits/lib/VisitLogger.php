@@ -21,7 +21,7 @@ final readonly class VisitLogger
         '/ajax/',
     ];
 
-    /** Расширения статических файлов */
+
     private const STATIC_EXTENSIONS = [
         'ico', 'png', 'jpg', 'jpeg', 'gif', 'css', 'js', 'svg', 'woff', 'woff2', 'ttf',
     ];
@@ -50,13 +50,11 @@ final readonly class VisitLogger
                 'REFERER'     => $_SERVER['HTTP_REFERER'] ?: null,
             ]);
         } catch (\Throwable) {
-            // В продакшене — логирование через \Bitrix\Main\Diag\Diag
+           
         }
     }
 
-    /**
-     * Проверка — нужно ли пропустить логирование.
-     */
+
     private static function shouldSkip(string $pageUrl): bool
     {
         // Системные пути
@@ -88,7 +86,7 @@ final readonly class VisitLogger
     }
 
     /**
-     * Определение реального IP посетителя.
+     * Определение  IP.
      */
     private static function resolveIp(): string
     {
